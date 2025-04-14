@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Simple Game</title>
+    <style>
+        * {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canv">
+    </canvas>
+
+    <!-- NOTE: Depending on your file structure, the src="..." maybe different-->
+
+    <!-- Engine imports -->
+    <!-- The engine itself -->
+    <script src="/GameEngine/Engine.js"></script>
+
+    <!-- The static classes from the engine -->
+    <script src="/GameEngine/Static/Time.js"></script>
+    <script src="/GameEngine/Static/Input.js"></script>
+    <script src="/GameEngine/Static/Collision.js"></script>
+
+    <!-- The STAG classes -->
+    <script src="/GameEngine/engineClasses/Scene.js"></script>
+    <script src="/GameEngine/engineClasses/GameObject.js"></script>
+    <script src="/GameEngine/engineClasses/Component.js"></script>
+
+    <!-- The generic components in the engine -->
+    <script src="/GameEngine/prebuiltComponents/Transform.js"></script>
+    <script src="/GameEngine/prebuiltComponents/Circle.js"></script>
+    <script src="/GameEngine/prebuiltComponents/KeyboardMovement.js"></script>
+
+    <!-- Game imports -->
+    <!-- The components for our game -->
+    <script src="./Components/foodlogic.js"></script>
+    <script src="./Components/BallMovementComponent.js"></script>
+    <script src="./Components/VectorBounce.js"></script>
+    <script src="./Components/BallCollider.js"></script>
+    <script src="./Components/bodySegLogic.js"></script>
+    <script src="./Components/HeadLogic.js"></script>
+
+    
+    <!-- The game objects for our game -->
+    
+    <script src="./Objects/food.js"></script>
+    <script src="./Objects/BouncyBall.js"></script>
+    <script src="./Objects/bodySegment.js"></script>
+    <script src="./Objects/Head.js"></script>
+    
+    <!-- The scenes for our game -->
+    <script src="./Scenes/MainScene.js"></script>
+
+    <script>
+        //Run the game
+        //create engine main scene, !static
+
+        //create an class with numerous variables
+        //1. make factory methods that return a class set up the way you asked
+        //2. create a settings object that you pass into the constructor
+        //3.
+        Engine.currentScene = new MainScene()
+        Engine.setup()
+        
+        
+    </script>
+</body>
+
+</html>
