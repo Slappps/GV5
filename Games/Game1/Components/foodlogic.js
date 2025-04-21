@@ -24,7 +24,7 @@ class foodlogic extends Component{
                         for(let component of gameObject.components){
 
                             if (component instanceof HeadLogic){
-                                component.addBodySegment(1 , 'yellow')
+                                component.addBodySegment(1 , 'red')
                                 this.segAdded = 1
                             }
                         }

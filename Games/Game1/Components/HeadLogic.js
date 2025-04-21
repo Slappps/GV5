@@ -22,6 +22,17 @@ class HeadLogic extends Component {
         }
     }
 
+    removeBodySegment(){
+        for(let i = 0; i < Engine.currentScene.gameObjects.length; i++){
+            let object = Engine.currentScene.gameObjects[i]
+            let seg = this.body[this.body.length - 1]
+            if (seg == object){
+                this.body.pop()
+                Engine.currentScene.gameObjects.splice(i, 1)
+            }
+        }    
+    }
+
     // variable x is in addBodySegment and moveTail. I want it to be local to each function. How do i do this. using: var, let, or this.
     
 
@@ -52,12 +63,5 @@ class HeadLogic extends Component {
                 }
             }
         }
-
-
-
-
-
     }
-
-
 }

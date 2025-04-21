@@ -8,6 +8,9 @@ class MainScene extends Scene {
 
       this.gameObjects.push(playerGameObject)
       this.gameObjects.push(new Food)
+      this.gameObjects.push(new Enemy)
+      //this.gameObjects.push(new SceneLogic) //food spawner and enemy bounce
+      
       
       console.log(this)
 

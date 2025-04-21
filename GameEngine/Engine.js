@@ -4,6 +4,7 @@ class Engine {
    * The game loop calls update and draw using a timer
    */
   static currentScene = null
+  static bounds = null
   static gameLoop() {
     let canvas = document.querySelector("#canv")
     let ctx = canvas.getContext("2d")

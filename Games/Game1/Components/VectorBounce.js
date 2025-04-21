@@ -16,22 +16,28 @@ class VectorBounce extends Component{
 
 
     }
-    update(){}
+    update(){
+        this.move()
+    }
     move() {
-        
-        
-        this.radians = this.angle * (Math.PI / 180)
-        this.vecX = Math.cos(this.radians) * this.dirX
-        this.vecY = Math.sin(this.radians) * this.dirY
-        console.log(this.vecX,this.vecY)
+        let colliding = collisions.otofBnds()
 
-        //Time.deltaTime? How does js know which instance of Time are we reading this variable from from? Is this similar to Math.PI?
-        //vector angle not working, how is transformx,y diffrent from GV3
-        this.parent.transform.x += this.vecX * (this.speed * Time.deltaTime )
-        this.parent.transform.y += -1*(this.vecY * (this.speed * Time.deltaTime))
+        if(colliding){
+            console.log("bounce")
+        }
+        else{
+            this.radians = this.angle * (Math.PI / 180)
+            this.vecX = Math.cos(this.radians) * this.dirX
+            this.vecY = Math.sin(this.radians) * this.dirY
+            console.log(this.vecX,this.vecY)
 
+            //Time.deltaTime? How does js know which instance of Time are we reading this variable from from? Is this similar to Math.PI?
+            //vector angle not working, how is transformx,y diffrent from GV3
+            this.parent.transform.x += this.vecX * (this.speed * Time.deltaTime )
+            this.parent.transform.y += -1*(this.vecY * (this.speed * Time.deltaTime))
+        }
         
-        
+                
 
 
     }
