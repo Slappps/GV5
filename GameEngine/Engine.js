@@ -4,15 +4,20 @@ class Engine {
    * The game loop calls update and draw using a timer
    */
   static currentScene = null
-  static bounds = null
+  static boundX = null
+  static boundY = null
+  
   static gameLoop() {
     let canvas = document.querySelector("#canv")
     let ctx = canvas.getContext("2d")
-
+    
     //Make the canvas the same size as our window
     //so it is "full screen"
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
+
+    Engine.boundX = canvas.width
+    Engine.boundY = canvas.height
 
     // Update the current scene
     

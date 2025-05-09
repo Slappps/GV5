@@ -8,7 +8,7 @@ class Enemy extends GameObject{
         
         this.addComponent(new Circle('orange'))
         this.addComponent(new enemyLogic())
-        //this.addComponent(new VectorBounce())
+        this.addComponent(new VectorBounce())
         
 
     }

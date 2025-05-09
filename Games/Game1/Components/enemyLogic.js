@@ -10,6 +10,9 @@ class enemyLogic extends Component{
         
     }
 
+
+    
+
     enemyCollision(){
 
         for (let gameObject of Engine.currentScene.gameObjects){
